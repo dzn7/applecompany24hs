@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://applecompany24hs.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -33,18 +33,18 @@ export const metadata: Metadata = {
     "conserto celular teresina",
   ],
   authors: [{ name: "Apple Company 24hs" }],
-  alternates: { canonical: "/" },
+  alternates: { canonical: `${SITE_URL}/` },
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "/",
+    url: SITE_URL,
     siteName: "Apple Company 24hs",
     title: "Apple Company 24hs - Assistência Técnica Apple em Teresina-PI",
     description:
       "Assistência técnica Apple em Teresina-PI: iPhone, MacBook, iPad e Apple Watch. Técnicos certificados, peças originais, garantia e atendimento 24h.",
     images: [
       {
-        url: "/logo.png",
+        url: `${SITE_URL}/logo.png`,
         width: 512,
         height: 512,
         alt: "Apple Company 24hs",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     title: "Apple Company 24hs - Assistência Técnica Apple em Teresina-PI",
     description:
       "Assistência técnica Apple em Teresina-PI: iPhone, MacBook, iPad e Apple Watch. Técnicos certificados, peças originais, garantia e atendimento 24h.",
-    images: ["/logo.png"],
+    images: [`${SITE_URL}/logo.png`],
     creator: "@applecompany24hs",
   },
   robots: {
@@ -74,7 +74,13 @@ export const metadata: Metadata = {
     ICBM: "-5.0892, -42.8019",
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
+    shortcut: "/favicon.ico",
   },
 };
 

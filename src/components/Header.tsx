@@ -37,13 +37,15 @@ const Header = () => {
         <div className="h-16 flex items-center justify-between">
           {/* Logo + Name */}
           <a href="#home" className="flex items-center gap-3 group">
-            <span className="relative w-10 h-10 rounded-full overflow-hidden ring-1 ring-apple-blue-500/20">
+            <span className="relative w-16 h-16 rounded-full overflow-hidden">
               <Image
                 src="/logo.png"
                 alt="Apple Company 24hs"
                 fill
-                className="object-cover"
+                className="object-cover object-center"
                 priority
+                quality={100}
+                sizes="64px"
               />
             </span>
             <span className="hidden sm:flex flex-col leading-tight">

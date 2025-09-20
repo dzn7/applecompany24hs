@@ -135,12 +135,14 @@ export default function Home() {
       <footer className="glass-effect bg-white/70 text-gray-800 py-10">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="relative w-10 h-10 rounded-full overflow-hidden ring-1 ring-apple-blue-500/20">
+            <div className="relative w-16 h-16 rounded-full overflow-hidden">
               <Image
                 src="/logo.png"
                 alt="Apple Company 24hs"
                 fill
-                className="object-cover"
+                className="object-cover object-center"
+                quality={100}
+                sizes="64px"
               />
             </div>
             <span className="text-xl font-semibold tracking-tight">
